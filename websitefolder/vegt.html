@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+     .food-section {
+    padding: 45px 7%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #ddd;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+}
+
+.food-img {
+   height:120px;
+   width:100%;
+   overflow:hidden;
+   border-radius:15px;
+  }
+
+.food-card h2 {
+    color: #d35400;
+}
+
+.food-card h3 {
+    font-size: 22px;
+}
+
+.food-card button,
+form button {
+    border: none;
+    padding: 11px 17px;
+    border-radius: 20px;
+    background: #d35400;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 4px;
+}
+
+.food-card button:hover,
+form button:hover {
+    background: #a84300;
+}
+
+.food-card .order {
+    background: #27ae60;
+}
+
+/* CART */
+
+.cart-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cart-item {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item button {
+    background: #d35400;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.total-box {
+    background: #ffe0b2;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.checkout,
+.clear {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.checkout {
+    background: #27ae60;
+}
+
+.clear {
+    background: #c0392b;
+}
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie World - Non-Veg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🍴 <span>Foodie World</span></div>
+
+    <nav>
+        <a href="index.html">🏡Home</a>
+        <a href="menus.html">🍽️Menu</a>
+        <a href="veg.html">🥕Veg</a>
+        <a href="nonveg.html">🍗Non-Veg</a>
+        <a href="cart.html">🛒 Cart</a>
+        <a href="connect.html">📞Contact Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>🥕Vegetarian Menu</h1>
+    <p>Fresh and delicious vegetarian dishes</p>
+</section>
+
+<section class="food-section">
+<div>
+   
+
+  <div class="food-card">
+      <img src="C:\Users\Kamadhenu BCA\Downloads\sam\pan.jpg" alt="Paneer Masala"
+       style="width:500px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+
+        <h2>Paneer Masala</h2>
+        <p>.hhhhh</p>
+        <h3>₹220</h3>
+
+        <button onclick="addToCart('Paneer Masala', 220)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Paneer Masala', 220)">
+            Order Now
+        </button>
+    </div>
+
+<div class="food-card">
+       <img src="C:\Users\Kamadhenu BCA\Downloads\sam\ppppppppp.jpeg" alt="Pav Bhaji"
+
+    style="width:500px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Pav Bhaji</h2>
+        <p>Egg curry is a spicy and tasty dish made with boiled eggs and rich gravy</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Pav Bhaji', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Pav Bhaji', 280)">
+            Order Now
+        </button>
+    </div>
+     </div> <div>
+ <div class="food-card">
+     <img src= "C:\Users\Kamadhenu BCA\Downloads\sam\mashroom.jpg" alt="Mushroom Masala"
+    style="width:450px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Mushroom Masala</h2>
+        <p>Juicy chicken roasted with Indian spices.</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Mushroom Masala', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Mushroom Masala', 280)">
+            Order Now
+        </button>
+    </div>
+<div class="food-card">
+     <img src="C:\Users\Kamadhenu BCA\Downloads\sam\paneer chilly.jpg" alt="Paneer Chilly"
+    style="width:500px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Paneer Chilly</h2>
+        <p>Egg curry is a spicy and tasty dish made with boiled eggs and rich gravy</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Paneer Chilly', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Paneer Chilly', 280)">
+            Order Now
+        </button>
+    </div>
+     
+ <div class="food-card">
+     <img src="C:\Users\Kamadhenu BCA\Downloads\sam\butter nan.jpg" alt="Butter Naan"
+    style="width:450px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Butter Naan</h2>
+        <p>Juicy chicken roasted with Indian spices.</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Butter Naan', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Butter Naan', 280)">
+            Order Now
+        </button>
+    </div>
+
+     </div><div>
+ <div class="food-card">
+     <img src="C:\Users\Kamadhenu BCA\Downloads\sam\rice.jpg" alt="Veg Biriyani"
+    style="width:450px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Veg Biriyani</h2>
+        <p>Juicy chicken roasted with Indian spices.</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Veg Biriyani', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Veg Biriyani', 280)">
+            Order Now
+        </button>
+    </div>
+ <div class="food-card">
+     <img src="C:\Users\Kamadhenu BCA\Downloads\sam\french fry.jpg" alt="French Fry"
+    style="width:450px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>French Fry</h2>
+        <p>Juicy chicken roasted with Indian spices.</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('French Fry', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('French Fry', 280)">
+            Order Now
+        </button>
+    </div>
+
+ <div class="food-card">
+     <img src="C:\Users\Kamadhenu BCA\Downloads\sam\samosa.jpeg" alt="Samosa"
+    style="width:450px;height:500px;object-fit:cover;border-radius:15px;"> 
+
+        
+        <h2>Samosa</h2>
+        <p>Juicy chicken roasted with Indian spices.</p>
+        <h3>₹280</h3>
+
+        <button onclick="addToCart('Samosa', 280)">
+            Add to Cart
+        </button>
+
+        <button class="order" onclick="orderNow('Samosa', 280)">
+            Order Now
+        </button>
+    </div></div>
+
+   
+
+
+
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
